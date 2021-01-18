@@ -3,7 +3,7 @@ import { OutputForecast } from "../src/model/Forecast"
 
 const getInfo = jest.fn((info: any) =>{ 
     return new OutputForecast (
-    "test","test","test", 50, "test"
+    "test", "test","test", 50, 50, "test"
     );
 })
 

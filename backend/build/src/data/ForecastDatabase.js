@@ -10,15 +10,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ForecastDatabase = void 0;
+const ParameterError_1 = require("../error/ParameterError");
 const Forecast_1 = require("../model/Forecast");
 const Basedatabase_1 = require("./Basedatabase");
-class ForecastDatabase extends Basedatabase_1.Basedatabase {
+class ForecastDatabase {
     constructor() {
-        super(...arguments);
         this.getInfo = (info) => __awaiter(this, void 0, void 0, function* () {
             try {
-                const resultForecast = yield this.getConnection(info);
-                return Forecast_1.OutputForecast.toForecastModel(resultForecast.results);
+                const resultForecast = yield Basedatabase_1.getForecast(info);
+                if (!resultForecast) {
+                    throw new ParameterError_1.ParameterError("Algo deu errado", 401);
+                }
+                ;
+                return Forecast_1.OutputForecast.toForecastModel(resultForecast.data.results);
             }
             catch (error) {
                 throw new Error(error.message);
