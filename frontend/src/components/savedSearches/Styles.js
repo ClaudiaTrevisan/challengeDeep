@@ -6,6 +6,7 @@ export const DivSavedSearches = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 1.3em;
+    margin-bottom: 12px;
 `;
 
 export const DivHug = styled.div`
@@ -24,6 +25,10 @@ export const DivInfoSaved = styled.div`
     font-weight: 700;
     color: #5e5d5d;
     word-wrap: break-word;
+
+    @media(min-width: 410px) {
+        width: 326px;
+    }
 `;
 
 export const ImgDelete = styled.img`
@@ -31,13 +36,21 @@ export const ImgDelete = styled.img`
 `;
 
 export const ButtonCompare = styled.button`
-    width: 81.1vw;
+    width: 82vw;
     align-self: baseline;
-    margin-left: .8em;
     height: 40px;
     background-color: black;
     color: white;
-    border: none;
+    border: 1px solid black;
     font-size: 1.3rem;
     cursor: pointer;
+
+    @media(min-width: 364px) {
+        width: 81.1vw;
+    };
+
+    @media(min-width: 410px) {
+        width: 348px;
+        margin: 0px;
+    };
 `;

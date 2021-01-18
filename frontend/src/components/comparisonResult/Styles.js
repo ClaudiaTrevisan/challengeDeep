@@ -11,9 +11,7 @@ export const DivTable = styled.div`
 export const ContentTable = styled.div`
     display: flex;
     flex-direction: column;
-    flex-direction: column;
     justify-content: center;
-    margin: 4px 4px 8px 4px;
     border: 1px solid;
 `;
 
@@ -23,6 +21,10 @@ export const BigDiv = styled.div`
     grid-template-rows: repeat(auto-fill, minmax(min(1rem, 100%), 1fr));    
     width: 90vw;
     margin: 4px 4px 8px 4px;
+
+    @media(min-width: 560px) {
+        width: 540px;
+    }
 
 `;
 

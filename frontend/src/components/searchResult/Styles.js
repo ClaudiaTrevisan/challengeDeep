@@ -17,6 +17,10 @@ export const DivResult = styled.div`
     margin-top: 30px;
     height: 250px;
     padding: 10px;
+
+    @media(min-width: 410px) {
+        width: 355px;
+    }
 `;
 
 export const DivTextShowing = styled.div`

@@ -25,7 +25,7 @@ const SearchResult = (props) =>{
     };
 
     return (
-        <BigDiv>
+        <BigDiv data-testid={'resultSearch'}>
             <DivResult>
                 <DivTextShowing stateValue={props.stateDisplay}>
                     {textShowing}
@@ -41,7 +41,7 @@ const SearchResult = (props) =>{
                     <DivDetail>
                         <ul>
                             <li>Temperatura: {forecastCity && forecastCity.temp}°</li>
-                            <li>Humidade: {forecastCity && forecastCity.humidity}%</li>
+                            <li>Umidade: {forecastCity && forecastCity.humidity}%</li>
                             <li>Velocidade do vento: {forecastCity && forecastCity.wind_speedy}</li>
                         </ul>
                     </DivDetail>

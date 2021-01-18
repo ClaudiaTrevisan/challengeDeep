@@ -6,7 +6,8 @@ import styled from 'styled-components';
 const DivMother = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: flex 1;
+  justify-content: center;
+  align-items: center;
 `;
 
 const App = () =>{
