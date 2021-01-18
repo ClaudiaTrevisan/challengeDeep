@@ -19,7 +19,7 @@ class ForecastController {
         this.forecastBusiness = forecastBusiness;
         this.getForecast = (req, res) => __awaiter(this, void 0, void 0, function* () {
             try {
-                const city = req.body.city;
+                const city = req.query.city;
                 const result = yield this.forecastBusiness.getForecast(city);
                 res.status(200)
                     .send(result);
