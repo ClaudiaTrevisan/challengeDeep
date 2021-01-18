@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import {goBack} from '../../routes/Coordinator'
-import { BigDiv, ButtonBack, ContentTable, DivTable, HeaderColumnCel, HeaderColumnCelBlack, HeaderTable, LineCel } from './Styles';
+import { BigDiv, ButtonBack, ContentTable, DivTable, HeaderColumnCel, HeaderColumnCelBlack, LineCel } from './Styles';
 
 const ComparisonResult = () =>{
     const history = useHistory();

@@ -24,7 +24,7 @@ const FormSearch = (props) =>{
                     name='city'
                     placeholder='Cidade'
                 />
-                <ImgSearch onClick={clickSearch} src={loupe} alt='Buscar'/>
+                <ImgSearch data-testid={'clickSearch'} onClick={clickSearch} src={loupe} alt='Buscar'/>
             </SearchForm>
         </DivForm>
     );

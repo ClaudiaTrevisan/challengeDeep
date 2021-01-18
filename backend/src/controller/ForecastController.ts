@@ -10,9 +10,7 @@ export class ForecastController {
 
     public getForecast = async (req: Request, res: Response): Promise<void> =>{
         try {
-            const city: string = req.body.city
-
-            console.log(req.body.city)
+            const city: string = req.query.city as string
 
             const result: OutputForecast = await this.forecastBusiness.getForecast(city)
 
